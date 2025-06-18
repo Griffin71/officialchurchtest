@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMMG Guild - St Lawrence Servers</title>
+  <link rel="stylesheet" href="bmmg.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>ST. BERNARD MIZEKI MEN’S GUILD</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="../guilds.html"><i class="fa fa-users"></i> Guilds</a></li>
+        <li><a href="../events.html"><i class="fa fa-calendar-alt"></i> Events</a></li>
+        <li><a href="../contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+   <section class="hero">
+    
+   </section>
+  
+
+   <section class="executives">
+    <h2><i class="fa fa-users"></i> Executives</h2>
+    <ul>
+      <li><strong>Chairperson:</strong> Sihle Leshaba</li>
+      <li><strong>Training Officer:</strong> Kabelo Kgosana</li>
+      <li><strong>Secretary:</strong> Sibusiso Nowatha</li>
+    </ul>
+  </section>
+
+  <section class="description">
+    <h2>ST. BERNARD MIZEKI MEN’S GUILD</h2>
+    <h3>Background</h3>
+    <p></p>
+      The St. Bernard Mizeki Men’s Guild at St. Francis Anglican Church was founded in 1990 under the leadership of Reverend Sondiyazi. Alongside three dedicated church members—Mr. Dyantyi, Mrs. Papa, and Mrs. Shabangu—the guild was established with the mission of spreading the Gospel and enhancing spiritual growth. The founders emphasized the importance of service to others, encouraging active participation among members in church life and promoting Christian values within their local communities.
+    </p>
+    <h3>Aims and Objectives</h3>
+    <ul>
+      <li><strong>Weekly Worship:</strong> To meet regularly for prayer and worship services, fostering a deeper faith in God.</li>
+      <li><strong>Support:</strong> To visit the sick, the sorrowful, and those in need, offering comfort and assistance to individuals facing challenges or hardships.</li>
+      <li><strong>Patronal Festival:</strong> To uphold and actively participate in the commemoration of the St. Bernard Mizeki Patronal Festival, celebrated annually on June 18.</li>
+      <li><strong>Engagement:</strong> To attend special worship services, guild activities, outreach programs, training workshops, and annual guild conferences.</li>
+      <li><strong>Bible Study:</strong> To engage in Bible Study classes, aimed at fostering a deeper understanding of the Word of God.</li>
+      <li><strong>Stewardship:</strong> To practice stewardship, nurturing a spirit of generosity and responsible management of resources.</li>
+    </ul>
+  </section>
+
+  
+ 
+
+  <section class="media">
+    <h2><i class="fa fa-photo-film"></i> Media Gallery</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('photos')"><i class="fa fa-image"></i> Photos</button>
+      <button class="tab-button" onclick="switchTab('videos')"><i class="fa fa-video"></i> Videos</button>
+    </div>
+
+    <div id="photos" class="tab-content active">
+      <div class="media-item">
+      <img src="stuff/BMMG3.jpg" alt="Photo 1" onclick="openModal('stuff/BMMG3.jpg')" style="cursor:pointer;" />
+      <a href="stuff/BMMG3.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+      <img src="stuff/BMMG4.jpg" alt="Photo 2" onclick="openModal('stuff/BMMG4.jpg')" style="cursor:pointer;" />
+      <a href="stuff/BMMG4.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <!-- Modal for enlarged photo -->
+    <div id="photoModal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(15,18,30,0.96); align-items:center; justify-content:center; transition:background 0.3s;">
+      <button onclick="closeModal()" aria-label="Close" style="position:absolute; top:24px; right:36px; background:rgba(30,30,40,0.7); border:none; color:#fff; font-size:2.2rem; cursor:pointer; z-index:2001; padding:0.5rem 1.2rem; border-radius:50%; box-shadow:0 2px 8px #0007; transition:background 0.2s, color 0.2s;">
+      <i class="fa fa-times"></i>
+      </button>
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%;">
+      <img id="modalImg" src="" alt="Enlarged Photo" style="max-width:90vw; max-height:75vh; margin:auto; display:block; box-shadow:0 8px 40px #000b; border-radius:16px; border:4px solid #fff; background:#222;" />
+      <a id="downloadModalImg" href="" download style="margin-top:1.2rem; color:#fff; background:#1a1a2a; padding:0.6rem 1.4rem; border-radius:8px; text-decoration:none; font-size:1.1rem; box-shadow:0 2px 8px #0005; transition:background 0.2s, color 0.2s;">
+        <i class="fa fa-download"></i> Download Image
+      </a>
+      <div id="downloadStatus" style="margin-top:1rem; min-height:2em;"></div>
+      </div>
+    </div>
+    <style>
+      @keyframes successFadeIn {
+      0% { opacity: 0; transform: scale(0.8);}
+      60% { opacity: 1; transform: scale(1.1);}
+      100% { opacity: 1; transform: scale(1);}
+      }
+      @keyframes successGlow {
+      0% { box-shadow: 0 0 0px #00e676;}
+      50% { box-shadow: 0 0 18px #00e676;}
+      100% { box-shadow: 0 0 0px #00e676;}
+      }
+      .success-message {
+      color: #00e676;
+      font-weight: bold;
+      font-size: 1.2rem;
+      animation: successFadeIn 0.7s, successGlow 1.2s 2;
+      border-radius: 8px;
+      padding: 0.4em 1em;
+      background: rgba(0,40,20,0.13);
+      display: inline-block;
+      margin-top: 0.5em;
+      }
+      .shake {
+      animation: shake 0.4s;
+      }
+      @keyframes shake {
+      0% { transform: translateX(0);}
+      20% { transform: translateX(-8px);}
+      40% { transform: translateX(8px);}
+      60% { transform: translateX(-6px);}
+      80% { transform: translateX(6px);}
+      100% { transform: translateX(0);}
+      }
+    </style>
+    <script>
+      function openModal(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('downloadModalImg').href = src;
+      document.getElementById('photoModal').style.display = 'flex';
+      document.getElementById('downloadStatus').innerHTML = '';
+      }
+      function closeModal() {
+      document.getElementById('photoModal').style.display = 'none';
+      document.getElementById('modalImg').src = '';
+      document.getElementById('downloadModalImg').href = '';
+      document.getElementById('downloadStatus').innerHTML = '';
+      }
+
+      // Enhanced download logic
+      document.getElementById('downloadModalImg').addEventListener('click', function(e) {
+      e.preventDefault();
+      const url = this.href;
+      const statusDiv = document.getElementById('downloadStatus');
+      statusDiv.innerHTML = '';
+      fetch(url, {mode: 'cors'})
+        .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok. Check your network: ' + response.status);
+        return response.blob();
+        })
+        .then(blob => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = url.split('/').pop();
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          URL.revokeObjectURL(a.href);
+          document.body.removeChild(a);
+        }, 500);
+        // Success message with animation
+        statusDiv.innerHTML = '<span class="success-message">Successful <i class="fa fa-check-circle"></i></span>';
+        statusDiv.classList.remove('shake');
+        void statusDiv.offsetWidth; // trigger reflow for animation
+        statusDiv.classList.add('shake');
+        })
+        .catch(() => {
+        statusDiv.innerHTML = '<span style="color:#ff5252;font-weight:bold;">Download failed. If you are running this site on a developer browser/engine, it may violate CORS. Please use a regular browser or host the site properly.</span>';
+        });
+      });
+
+      // Allow closing modal by clicking outside the modal content or the X button
+      document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+      });
+    </script>
+    <script>
+      // Optional: Add hover effect for images
+      document.querySelectorAll('.media-item img').forEach(img => {
+        img.addEventListener('mouseover', () => img.style.transform = 'scale(1.05)');
+        img.addEventListener('mouseout', () => img.style.transform = 'scale(1)');
+      });
+    </script>
+    <script>
+      function openModal(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('photoModal').style.display = 'flex';
+      }
+      function closeModal() {
+      document.getElementById('photoModal').style.display = 'none';
+      document.getElementById('modalImg').src = '';
+      }
+      // Optional: Close modal when clicking outside the image
+      document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+      });
+    </script>
+
+    <div id="videos" class="tab-content">
+      <div class="media-item">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <a href="video1.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4" />
+        </video>
+        <a href="video2.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2><i class="fa fa-question-circle"></i> Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the purpose of the BMMG Guild? <i class="fa fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>BMMG Guild focuses on empowering members to grow creatively and spiritually while contributing to our larger guild community.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I become part of BMMG? <i class="fa fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>You can get involved by speaking to a current member or reaching out to any of the executives listed above.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does BMMG host any special events? <i class="fa fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes! We participate in collaborative and creative events within St Lawrence Servers and external organizations.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 St Francis of Assisi | Built by Line-Tech | <i class="fa fa-envelope"></i> info@linetech.com</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+  <script src="bmmg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+ <script src="../piracy.js"></script>
+</body>
+</html>

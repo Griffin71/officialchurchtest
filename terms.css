@@ -1,0 +1,136 @@
+/* terms.css - */
+
+body {
+  margin: 0;
+  padding-bottom: 80px; /* space for fixed footer */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* Header Section */
+header {
+  background-color: #0a5c38; /* dark green */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #50c878; /* emerald green */
+  animation: fadeIn 1.5s ease-in;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header a button {
+  margin: 10px 8px;
+  padding: 10px 16px;
+  background-color: #50c878; /* emerald green */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+header a button:hover {
+  background-color: #3ca369;
+}
+
+/* Main Legal Container */
+.legal-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #0a5c38;
+  border-radius: 8px;
+}
+
+/* Section Styling */
+.legal-section, .contact-dev {
+  margin-bottom: 40px;
+}
+
+.legal-section h2,
+.contact-dev h2 {
+  color: #0a5c38;
+  margin-bottom: 10px;
+}
+
+.legal-section ul,
+.contact-dev ul {
+  list-style: none;
+  padding: 0;
+}
+
+.legal-section li,
+.contact-dev li {
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.legal-section li i,
+.contact-dev li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #0a5c38;
+}
+
+.contact-dev a {
+  color: #0a5c38;
+  text-decoration: none;
+}
+
+.contact-dev a:hover {
+  text-decoration: underline;
+}
+
+/* Coffee Button */
+.coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue; /* dark green */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.coffee-btn:hover {
+  background-color: #50c878; /* emerald green */
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer (overridden inline) */
+footer {
+  background-color: #0a5c38 !important;
+  color: #fff !important;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

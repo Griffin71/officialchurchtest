@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. Francis Anglican Choir</title>
+  <link rel="stylesheet" href="choir.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>St. Francis of Assisi Church Choir</h1>
+    <nav>
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+      </button>
+      <ul id="nav-list">
+      <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="../guilds.html"><i class="fa fa-users"></i> Guilds</a></li>
+      <li><a href="../events.html"><i class="fa fa-calendar-alt"></i> Events</a></li>
+      <li><a href="../contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+    <style>
+      nav {
+      position: relative;
+      }
+      .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #333;
+      cursor: pointer;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      z-index: 1001;
+      }
+      nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      }
+      nav ul li a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      }
+      @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        width: 180px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        border-radius: 0 0 8px 8px;
+        z-index: 1000;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav ul li {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+      }
+      nav ul li:last-child {
+        border-bottom: none;
+      }
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+      var navList = document.getElementById('nav-list');
+      navList.classList.toggle('show');
+      }
+      // Optional: Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+      var nav = document.querySelector('nav');
+      var navList = document.getElementById('nav-list');
+      var hamburger = document.querySelector('.hamburger');
+      if (window.innerWidth <= 768) {
+        if (!nav.contains(e.target) && navList.classList.contains('show')) {
+        navList.classList.remove('show');
+        }
+      }
+      });
+    </script>
+  </header>
+  <section class="hero" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: url('stuff/choir.jpeg') center/cover no-repeat; min-height: 350px; margin-bottom: 2rem; color: #fff; position: relative;">
+    <div style="background: rgba(0,0,0,0.5); padding: 2rem 1rem; border-radius: 10px;">
+      <h2 style="margin-bottom: 1rem;"><i class="fa fa-quote-left"></i> Motto</h2>
+      <blockquote style="font-size: 2rem; font-style: italic;">
+        "With Christ We Win"
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="description">
+    <p>Welcome to the St. Francis Anglican Choir. We are a dedicated guild committed to serving with excellence and integrity.</p>
+  </section>
+
+  <section class="executives">
+    <h2><i class="fa fa-users"></i> Executives</h2>
+    <ul>
+      <li><strong>Chairperson:</strong> Sihle Leshaba</li>
+      <li><strong>Training Officer:</strong> Kabelo Kgosana</li>
+      <li><strong>Secretary:</strong> Sibusiso Nowatha</li>
+        <li><strong>Vice Chairperson:</strong> Thato Mothiba</li>
+        <li><strong>Public Relations Officer:</strong> Thato Mothiba</li>
+        <li><strong>Treasure:</strong> Thato Mothiba</li>
+    </ul>
+  </section>
+
+  
+
+  <section class="aims-objectives">
+    <h2><i class="fa fa-bullseye"></i> Aims and Objectives</h2>
+    <ul>
+      <li><strong>Uplifting Worship:</strong> To uplift, promote, and maintain the standard of music and worship in the church and beyond.</li>
+      <li><strong>Fellowship and Unity:</strong> To encourage and foster the spirit of fellowship, progress, unity, and collaboration among fellow choristers and the Pretoria Anglican Fellowship (PACF).</li>
+      <li><strong>Organizing Recreation:</strong> To organize activities that offer recreation to the church community.</li>
+      <li><strong>Participation in Festivals:</strong> To take part in music festivals and competitions organized by the parish, PACF, or other church-related organizations.</li>
+      <li><strong>Support in Grief:</strong> To assist and attend prayer meetings and funerals for fellow parishioners.</li>
+      <li><strong>Visiting the Sick:</strong> To visit sick congregants at home and in hospitals, providing support and comfort.</li>
+      <li><strong>Fundraising:</strong> To raise funds to support the choir and the parish.</li>
+      <li><strong>Stewardship and Bible Study:</strong> To display good stewardship, encourage Bible study among members, and lead by example within the diocese.</li>
+    </ul>
+  </section>
+
+  <section class="media">
+    <h2><i class="fa fa-photo-film"></i> Media Gallery</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('photos')"><i class="fa fa-image"></i> Photos</button>
+      <button class="tab-button" onclick="switchTab('videos')"><i class="fa fa-video"></i> Videos</button>
+    </div>
+
+    <div id="photos" class="tab-content active">
+      <div class="media-item">
+        <img src="stuff/choir2.jpg" alt="Photo 1" />
+        <a href="stuff/choir2.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/7.jpg" alt="Photo 2" />
+        <a href="stuff/7.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/8.jpg" alt="Photo 3" />
+        <a href="stuff/8.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/9.jpg" alt="Photo 4" />
+        <a href="stuff/9.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/10.jpg" alt="Photo 5" />
+        <a href="stuff/10.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/11.jpg" alt="Photo 6" />
+        <a href="stuff/12.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/13.jpg" alt="Photo 8" />
+        <a href="stuff/13.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/15.jpg" alt="Photo 10" />
+        <a href="stuff/15.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/16.jpg" alt="Photo 11" />
+        <a href="stuff/16.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/17.jpg" alt="Photo 12" />
+        <a href="stuff/17.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/18.jpg" alt="Photo 13" />
+        <a href="stuff/18.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <div id="videos" class="tab-content">
+      <div class="media-item">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <a href="video1.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4" />
+        </video>
+        <a href="video2.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+  </section>
+
+
+                    <section class="faq">
+                        <h2><i class="fa fa-question-circle"></i> Frequently Asked Questions</h2>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">What is the purpose of St Lawrence Servers?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>St. Francis Anglican Choir is a guild dedicated to serving with excellence and integrity, providing support and guidance to its members.</p>
+                        </div>
+                        </div>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">How can I join the guild?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>You can join the guild by contacting the Chairperson or any of the executives listed above for more information.</p>
+                        </div>
+                        </div>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">Are there any membership fees?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>No, there are no membership fees required to join St. Francis Anglican Choir.</p>
+                        </div>
+                        </div>
+                    </section>
+                    
+
+  <footer>
+    <p>&copy; 2025 St. Francis of Assisi Church Choir | Built by Line-Tech | <i class="fa fa-envelope"></i> kabelosamkelo19@gmail.com</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+
+
+    <script src="servers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+     <script src="piracy.js"></script>
+          <script src="../piracy.js"></script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - St. Francis of Assisi</title>
+  <link rel="stylesheet" href="events.css">
+  <link rel="stylesheet" href="mobilecomp.css">
+  <link rel="stylesheet" href="headers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><i class="fas fa-church"></i> St. Francis of Assisi</div>
+      <div class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="guilds.html"><i class="fas fa-users"></i> Guilds</a></li>
+        <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+        <li><a href="events.html" class="active"><i class="fas fa-calendar-alt"></i> Events</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="subtle-intro">Explore our upcoming events and stay connected with the community.</p>
+    <style>
+      .subtle-intro {
+      color: #fff;
+      font-size: 1.1em;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-out forwards;
+      margin-bottom: 10px;
+      }
+      @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  </section>
+
+  <main>
+    <section class="subscribe-section">
+      <center>
+        <h2 class="subscribe-title">
+          <i class="fas fa-bell"></i>
+          <span>Subscribe for Future Events</span>
+          <span class="confetti"></span>
+        </h2>
+        <form id="subscribeForm" autocomplete="off">
+          <div class="subscribe-input-wrapper">
+            <input 
+              type="email" 
+              placeholder="Enter your email..." 
+              required 
+              class="subscribe-input" 
+              style="min-width:180px; width:100%; max-width:320px;" 
+              inputmode="email"
+              autocomplete="email"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              maxlength="64"
+              tabindex="1"
+              onfocus="this.style.fontSize='16px';" 
+            />
+            <button type="submit" class="subscribe-btn" style="height:48px; min-width:48px; border-radius:0 30px 30px 0; padding:0 22px; display:flex; align-items:center; justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Subscribe
+            </button>
+          </div>
+        </form>
+        <p id="subscribeMessage"></p>
+        <div class="emoji-bounce" aria-hidden="true" style="font-size:2em; margin-top:10px;">
+          🎉 🥳 🎈
+        </div>
+      </center>
+      <style>
+        .subscribe-section {
+          margin: 40px auto 0 auto;
+          max-width: 420px;
+          background: linear-gradient(120deg, #fffbe6 60%, #ffe0b2 100%);
+          border-radius: 18px;
+          box-shadow: 0 4px 24px #f39c1230;
+          padding: 32px 18px 24px 18px;
+          position: relative;
+          animation: popIn 1.1s cubic-bezier(.4,2,.6,1);
+        }
+        .subscribe-title {
+          font-size: 1.5em;
+          color: #f39c12;
+          font-weight: bold;
+          margin-bottom: 18px;
+          position: relative;
+          animation: bounceInDown 1s;
+        }
+        .subscribe-title .confetti {
+          position: absolute;
+          right: -30px;
+          top: 0;
+          width: 30px;
+          height: 30px;
+          pointer-events: none;
+          background: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f389.png') no-repeat center/contain;
+          animation: confettiSpin 2.5s infinite linear;
+        }
+        .subscribe-input-wrapper {
+          display: flex;
+          gap: 0;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+        .subscribe-input {
+          padding: 12px 16px;
+          border: 2px solid #f7ca18;
+          border-radius: 30px 0 0 30px;
+          outline: none;
+          font-size: 1em;
+          transition: box-shadow 0.2s, border 0.2s;
+          width: 210px;
+          background: #fff;
+        }
+        .subscribe-input:focus {
+          border-color: #f39c12;
+          box-shadow: 0 0 8px #f7ca18;
+        }
+        .subscribe-btn {
+          padding: 12px 22px;
+          border: none;
+          border-radius: 0 30px 30px 0;
+          background: linear-gradient(90deg, #f39c12 60%, #f7ca18 100%);
+          color: #fff;
+          font-size: 1em;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background 0.2s, transform 0.18s;
+          box-shadow: 0 2px 8px #f39c1240;
+          outline: none;
+          position: relative;
+          z-index: 1;
+        }
+        .subscribe-btn:hover {
+          background: linear-gradient(90deg, #ffe082 60%, #f7ca18 100%);
+          color: #f39c12;
+          transform: scale(1.07) rotate(-2deg);
+          box-shadow: 0 6px 18px 0 #f39c1240;
+        }
+        #subscribeMessage {
+          min-height: 22px;
+          font-size: 1.08em;
+          color: #27ae60;
+          margin-top: 8px;
+          font-weight: 500;
+          animation: fadeIn 1s;
+        }
+        .emoji-bounce {
+          animation: emojiBounce 2.2s infinite;
+          user-select: none;
+          pointer-events: none;
+        }
+        @keyframes popIn {
+          0% { transform: scale(0.7); opacity: 0; }
+          60% { transform: scale(1.13); opacity: 1; }
+          100% { transform: scale(1); }
+        }
+        @keyframes bounceInDown {
+          0% { opacity: 0; transform: translateY(-40px);}
+          60% { opacity: 1; transform: translateY(10px);}
+          100% { transform: translateY(0);}
+        }
+        @keyframes fadeIn {
+          from { opacity: 0;}
+          to { opacity: 1;}
+        }
+        @keyframes emojiBounce {
+          0%, 100% { transform: translateY(0);}
+          30% { transform: translateY(-10px);}
+          50% { transform: translateY(-18px);}
+          70% { transform: translateY(-10px);}
+        }
+        @keyframes confettiSpin {
+          0% { transform: rotate(0);}
+          100% { transform: rotate(360deg);}
+        }
+        @media (max-width: 600px) {
+          .subscribe-section {
+            padding: 18px 4vw 18px 4vw;
+          }
+          .subscribe-input {
+            width: 120px;
+            font-size: 0.97em;
+          }
+          .subscribe-title {
+            font-size: 1.1em;
+          }
+        }
+      </style>
+   
+      <style>
+        @keyframes burstFade {
+          0% { opacity: 0; transform: translate(-50%, -50%) scale(0.7);}
+          30% { opacity: 1; transform: translate(-50%, -70%) scale(1.3);}
+          80% { opacity: 1; transform: translate(-50%, -90%) scale(1);}
+          100% { opacity: 0; transform: translate(-50%, -120%) scale(0.7);}
+        }
+        .confetti-burst {
+          z-index: 10;
+          text-shadow: 0 2px 8px #fff176, 0 1px 0 #f39c12;
+          pointer-events: none;
+          user-select: none;
+        }
+      </style>
+    </section>
+
+    <section class="events-section">
+      <h1><i class="fas fa-calendar-day"></i> Upcoming Events</h1>
+
+      <div class="events-filter">
+        <div class="filter-chip active" onclick="filterEvents('special')">
+          <i class="fas fa-star"></i>
+          <span>Special</span>
+          <span class="chip-glow"></span>
+        </div>
+        <div class="filter-chip" onclick="filterEvents('weekly')">
+          <i class="fas fa-calendar-week"></i>
+          <span>Weekly</span>
+          <span class="chip-glow"></span>
+        </div>
+        <div class="filter-chip" onclick="filterEvents('past')">
+          <i class="fas fa-history"></i>
+          <span>Past</span>
+          <span class="chip-glow"></span>
+        </div>
+      </div>
+      <style>
+        .events-filter {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+          margin: 50px auto 40px auto;
+          width: 100%;
+          max-width: 600px;
+        }
+        .filter-chip {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 14px 28px;
+          border-radius: 30px;
+          background: linear-gradient(90deg, #f39c12 60%, #f7ca18 100%);
+          color: #fff;
+          font-size: 1.08em;
+          font-family: inherit;
+          cursor: pointer;
+          position: relative;
+          box-shadow: 0 2px 12px rgba(243,156,18,0.13);
+          transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s, background 0.22s;
+          overflow: hidden;
+          outline: none;
+          animation: chipPop 0.7s cubic-bezier(.4,2,.6,1);
+        }
+        .filter-chip .chip-glow {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          border-radius: 30px;
+          pointer-events: none;
+          opacity: 0.5;
+          background: radial-gradient(circle at 70% 30%, #fff176 0%, transparent 70%);
+          z-index: 0;
+          animation: chipGlow 2.5s infinite alternate;
+        }
+        .filter-chip span, .filter-chip i {
+          position: relative;
+          z-index: 1;
+        }
+        .filter-chip:not(.active) {
+          background: linear-gradient(90deg, #e0e0e0 60%, #f5f5f5 100%);
+          color: #34495e;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+          filter: grayscale(0.2) brightness(0.97);
+        }
+        .filter-chip.active {
+          box-shadow: 0 6px 24px 0 #f39c1240, 0 1.5px 0 #fff176;
+          transform: scale(1.09);
+          outline: 2.5px solid #fff176;
+          background: linear-gradient(90deg, #f39c12 60%, #fff176 100%) !important;
+          color: #fff !important;
+          animation: chipBounce 1.1s cubic-bezier(.4,2,.6,1);
+        }
+        .filter-chip:hover:not(.active) {
+          transform: translateY(-5px) scale(1.04);
+          box-shadow: 0 6px 18px 0 #f39c1240;
+          background: linear-gradient(90deg, #ffe082 60%, #f7ca18 100%);
+          color: #f39c12;
+          filter: none;
+          animation: chipWiggle 0.5s;
+        }
+        .filter-chip:active {
+          transform: scale(0.97);
+        }
+        @keyframes chipPop {
+          0% { transform: scale(0.7); opacity: 0; }
+          60% { transform: scale(1.12); opacity: 1; }
+          100% { transform: scale(1); }
+        }
+        @keyframes chipGlow {
+          0% { opacity: 0.4; }
+          100% { opacity: 0.7; }
+        }
+        @keyframes chipBounce {
+          0% { transform: scale(0.95);}
+          60% { transform: scale(1.13);}
+          100% { transform: scale(1.09);}
+        }
+        @keyframes chipWiggle {
+          0% { transform: rotate(0);}
+          20% { transform: rotate(-4deg);}
+          40% { transform: rotate(4deg);}
+          60% { transform: rotate(-2deg);}
+          80% { transform: rotate(2deg);}
+          100% { transform: rotate(0);}
+        }
+        @media (max-width: 600px) {
+          .events-filter {
+        flex-direction: column;
+        gap: 14px;
+        max-width: 95vw;
+          }
+          .filter-chip {
+        width: 100%;
+        font-size: 0.93em;
+        padding: 10px 10px;
+        justify-content: center;
+          }
+        }
+      </style>
+
+      <div id="special-events" class="events-list">
+      <div class="special-events-info" style="text-align:center; margin: 40px 0;">
+        <h2 style="animation: fadeInDown 1s;"><i class="fas fa-star"></i> Stay Informed!</h2>
+        <p style="font-size:1.2em; color:#34495e; animation: fadeIn 2s;">
+          We sincerely appreciate your interest in our special events.
+        </p>
+        <p style="font-size:1.1em; color:#2c3e50; animation: bounceIn 2.5s;">
+          To be among the first to know about upcoming special gatherings, please subscribe above to receive our event emails.
+        </p>
+        <p style="font-size:1.1em; color:#2c3e50; animation: fadeIn 3s;">
+          Alternatively, you can also follow us on our social media platforms for real-time updates.
+        </p>
+        <p style="font-size:1.1em; color:#2c3e50; animation: fadeIn 2.8s;"></p>
+          You can also check the filters above for past or weekly events.
+        </p>
+        <p style="font-size:1.1em; color:#2c3e50; animation: pulse 3s infinite;">
+          Or, simply revisit this page regularly for the latest updates!
+        </p>
+        <div style="margin-top:20px; animation: tada 2s;">
+          <i class="fas fa-envelope-open-text" style="font-size:2em; color:#f39c12;"></i>
+          <i class="fas fa-calendar-check" style="font-size:2em; color:#27ae60; margin-left:20px;"></i>
+          <i class="fas fa-heart" style="font-size:2em; color:#e74c3c; margin-left:20px;"></i>
+          <i class="fas fa-hands-clapping" style="font-size:2em; color:#2980b9; margin-left:20px;"></i>
+          <i class="fas fa-sparkles" style="font-size:2em; color:#9b59b6; margin-left:20px;"></i>
+        </div>
+      </div>
+      <style>
+      @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px);}
+        to { opacity: 1; transform: translateY(0);}
+      }
+      @keyframes fadeIn {
+        from { opacity: 0;}
+        to { opacity: 1;}
+      }
+      @keyframes bounceIn {
+        0% { transform: scale(0.8);}
+        60% { transform: scale(1.05);}
+        80% { transform: scale(0.95);}
+        100% { transform: scale(1);}
+      }
+      @keyframes pulse {
+        0% { color: #2c3e50;}
+        50% { color: #f39c12;}
+        100% { color: #2c3e50;}
+      }
+      @keyframes tada {
+        0% { transform: scale(1);}
+        10%, 20% { transform: scale(0.9) rotate(-3deg);}
+        30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg);}
+        40%, 60%, 80% { transform: scale(1.1) rotate(-3deg);}
+        100% { transform: scale(1);}
+      }
+      </style>
+      </div>
+
+      <div id="weekly-events" class="events-list" style="display:none;">
+      <div class="event-card">
+        <h2><i class="fas fa-cross"></i> Weekly Service</h2>
+        <div class="event-details">
+        <p><strong><i class="fas fa-clock"></i> Time:</strong> Every Sunday at 8:30 AM</p>
+        <p><strong><i class="fas fa-location-dot"></i> Location:</strong> St. Francis Church</p>
+        <p><strong><i class="fas fa-info-circle"></i> Info:</strong> Join us for worship, fellowship, and spiritual reflection every Sunday morning.</p>
+        </div>
+      </div>
+      </div>
+
+      <div id="past-events" class="events-list" style="display:none;">
+      <div class="event-card">
+        <h2><i class="fas fa-people-group"></i> Youth Get to Know Each Other Fun Day</h2>
+        <div class="event-details"></div>
+        <p><strong><i class="fas fa-calendar"></i> Date:</strong> May 3, 2025</p>
+        <p><strong><i class="fas fa-clock"></i> Time:</strong> 12:00 PM - 5:00 PM</p>
+        <p><strong><i class="fas fa-align-left"></i> Description:</strong> A fun day for our youth to connect through games and meaningful activities.</p>
+        </div>
+      </div>
+      </div>
+
+      <script>
+      function filterEvents(type) {
+        document.getElementById('special-events').style.display = type === 'special' ? 'block' : 'none';
+        document.getElementById('weekly-events').style.display = type === 'weekly' ? 'block' : 'none';
+        document.getElementById('past-events').style.display = type === 'past' ? 'block' : 'none';
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`.filter-btn[onclick*="${type}"]`).classList.add('active');
+      }
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Follow us on social media:</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/stfrancismamelodiwest" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://twitter.com/stfrancismamelodiwest" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/stfrancismamelodiwest" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCX1Z5g7Q4v8x3G6J9f2Y5gA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <p class="footer-links">
+        <a href="terms.html" class="footer-link">Terms & Conditions</a> | 
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+      </p>
+      <p>&copy; 2025 St. Francis of Assisi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="events.js"></script> 
+
+ 
+  
+  
+</body>
+ <script src="piracy.js"></script>
+   <script src="header.js" defer></script>
+</html>

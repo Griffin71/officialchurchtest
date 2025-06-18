@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St-Agnes</title>
+  <link rel="stylesheet" href="stagnes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>St. Agnes</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="../guilds.html"><i class="fa fa-users"></i> Guilds</a></li>
+        <li><a href="../events.html"><i class="fa fa-calendar-alt"></i> Events</a></li>
+        <li><a href="../contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="description">
+    <p>Welcome to the St. Agnes's guild page.</p>
+  </section>
+
+  <section class="executives">
+    <h2><i class="fa fa-users"></i> Executives</h2>
+    <ul>
+      <li><strong>Chairperson:</strong> Sihle Leshaba</li>
+      <li><strong>Training Officer:</strong> Kabelo Kgosana</li>
+      <li><strong>Secretary:</strong> Sibusiso Nowatha</li>
+        <li><strong>Vice Chairperson:</strong> Thato Mothiba</li>
+        <li><strong>Public Relations Officer:</strong> Thato Mothiba</li>
+        <li><strong>Treasure:</strong> Thato Mothiba</li>
+    </ul>
+  </section>
+
+  <section class="aims-objectives"></section>
+    <h2><i class="fa fa-bullseye"></i> St. Agnes Guild Aims and Objectives</h2>
+    <ul>
+      <li><strong>Uphold Truth:</strong> To help members believe in and adhere to what is true.</li>
+      <li><strong>Promote Goodness:</strong> To encourage members to do what is right and to turn away from all that is harmful.</li>
+      <li><strong>Active Participation:</strong> To nurture loyalty among members, inspiring them to be active participants in the Church of God.</li>
+    </ul>
+  </section>
+
+
+  <section class="media">
+    <h2><i class="fa fa-photo-film"></i> Media Gallery</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('photos')"><i class="fa fa-image"></i> Photos</button>
+      <button class="tab-button" onclick="switchTab('videos')"><i class="fa fa-video"></i> Videos</button>
+    </div>
+
+    <div id="photos" class="tab-content active">
+      <div class="media-item">
+        <img src="stuff/STAGNES.png" alt="Photo 1" />
+        <a href="photo1.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="stuff/STAGNES2.png" alt="Photo 2" />
+        <a href="photo2.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <div id="videos" class="tab-content">
+      <div class="media-item">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <a href="video1.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4" />
+        </video>
+        <a href="video2.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+  </section>
+
+
+                    <section class="faq">
+                        <h2><i class="fa fa-question-circle"></i> Frequently Asked Questions</h2>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">What is the purpose of St Lawrence Servers?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>St. Agnes is a guild dedicated to serving with excellence and integrity, providing support and guidance to its members.</p>
+                        </div>
+                        </div>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">How can I join the guild?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>You can join the guild by contacting the Chairperson or any of the executives listed above for more information.</p>
+                        </div>
+                        </div>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">Are there any membership fees?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>No, there are no membership fees required to join St Agnes.</p>
+                        </div>
+                        </div>
+                    </section>
+                    
+
+  <footer>
+    <p>&copy; 2025 St. Francis of Assisi Mamelodi West | Built by Line-Tech | <i class="fa fa-envelope"></i> info@linetech.com</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+
+
+    <script src="servers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+            <script src="../piracy.js"></script>
+</body>
+
+</html>

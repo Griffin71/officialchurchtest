@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+header button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+header button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+
+.legal-section, .contact-dev {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.legal-section h2, .contact-dev h2 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+.legal-section ul, .contact-dev ul {
+    list-style: none;
+    padding: 0;
+}
+
+.legal-section ul li, .contact-dev ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.legal-section ul li i, .contact-dev ul li i {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+.contact-dev ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact-dev ul li a:hover {
+    text-decoration: underline;
+}
+
+.coffee-btn {
+    display: inline-block;
+    background-color: #0070ba;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.coffee-btn:hover {
+    background-color: #005c99;
+}
+
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

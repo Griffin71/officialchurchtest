@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunday School</title>
+  <link rel="stylesheet" href="sschool.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Sunday School</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="../guilds.html"><i class="fa fa-users"></i> Guilds</a></li>
+        <li><a href="../events.html"><i class="fa fa-calendar-alt"></i> Events</a></li>
+        <li><a href="../contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="description">
+    <p>Welcome to the Sunday School's page. We are a dedicated guild committed to serving with excellence and integrity.</p>
+  </section>
+
+  <section class="executives">
+    <h2><i class="fa fa-users"></i> Executives</h2>
+    <ul>
+      <li><strong>Chairperson:</strong> Sihle Leshaba</li>
+      <li><strong>Training Officer:</strong> Kabelo Kgosana</li>
+      <li><strong>Secretary:</strong> Sibusiso Nowatha</li>
+        <li><strong>Vice Chairperson:</strong> Thato Mothiba</li>
+        <li><strong>Public Relations Officer:</strong> Thato Mothiba</li>
+        <li><strong>Treasure:</strong> Thato Mothiba</li>
+    </ul>
+  </section>
+
+  <section class="media">
+    <h2><i class="fa fa-photo-film"></i> Media Gallery</h2>
+    <div class="media-info" style="background: #f0f4fa; border-left: 4px solid #007bff; padding: 1em; margin-bottom: 1.5em; border-radius: 6px; display: flex; align-items: flex-start; gap: 0.75em;">
+      <i class="fa fa-info-circle" aria-hidden="true" style="color: #007bff; font-size: 1.5em; flex-shrink: 0;"></i>
+      <div style="flex: 1;">
+      <p style="margin: 0 0 0.5em 0; font-size: 1em;">
+        All photos and videos displayed here feature minors whose participation has been approved by their guardians or parents.
+      </p>
+      <p style="margin: 0; font-size: 0.98em;">
+        Please read our 
+        <a href="../terms.html" style="color: #007bff; text-decoration: underline; font-weight: 500;">Terms &amp; Conditions</a> 
+        and 
+        <a href="../privacy.html" style="color: #007bff; text-decoration: underline; font-weight: 500;">Privacy Policy</a> 
+        to learn more about how we protect minors.
+      </p>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('photos')"><i class="fa fa-image"></i> Photos</button>
+      <button class="tab-button" onclick="switchTab('videos')"><i class="fa fa-video"></i> Videos</button>
+    </div>
+
+    <div id="photos" class="tab-content active">
+      <div class="media-item">
+        <img src="photo1.jpg" alt="Photo 1" />
+        <a href="photo1.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="photo2.jpg" alt="Photo 2" />
+        <a href="photo2.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <div id="videos" class="tab-content">
+      <div class="media-item">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <a href="video1.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4" />
+        </video>
+        <a href="video2.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+  </section>
+
+
+                    <section class="faq">
+                      <h2><i class="fa fa-question-circle"></i> Frequently Asked Questions</h2>
+
+                      <div class="faq-item">
+                        <button class="faq-question">What is Sunday School?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                          <p>Sunday School is a guild dedicated to teaching children about faith, values, and community through engaging lessons and activities.</p>
+                        </div>
+                      </div>
+
+                      <div class="faq-item">
+                        <button class="faq-question">Who can attend Sunday School?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                          <p>All children and youth are welcome to attend Sunday School, regardless of background or prior experience.</p>
+                        </div>
+                      </div>
+
+                      <div class="faq-item">
+                        <button class="faq-question">How do I enroll my child in Sunday School?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                          <p>You can enroll your child by contacting the Chairperson or any of the executives listed above for more information.</p>
+                        </div>
+                      </div>
+
+                      <div class="faq-item">
+                        <button class="faq-question">Is there a fee for Sunday School?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                          <p>No, there are no fees required to attend Sunday School.</p>
+                        </div>
+                      </div>
+
+                      <div class="faq-item">
+                        <button class="faq-question">Does my child need to attend Sunday School to be confirmed?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                          <p>Yes, attending Sunday School is required for children who wish to be confirmed in the church.</p>
+                        </div>
+                      </div>
+                    </section>
+                    
+
+  <footer>
+    <p>&copy; 2025 St. Francis of Assisi Mamelodi West | Built by Line-Tech | <i class="fa fa-envelope"></i> kabelosamkelo19@gmail.com</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+
+
+    <script src="servers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+            <script src="../piracy.js"></script>
+</body>
+</html>

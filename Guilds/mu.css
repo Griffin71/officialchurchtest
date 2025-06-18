@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4; /* light background for contrast */
+    color: #333;              /* dark text for readability */
+    line-height: 1.6;
+}
+
+header {
+  background-color: #f4c542; /* gold color */
+  color: white;
+  padding: 20px;
+  text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: fit-content;
+}
+  
+
+ .Motto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertical centering */
+  align-items: center;         /* horizontal centering */
+  min-height: 60vh;            /* shorter than full screen */
+  text-align: center;
+  background: url('stuff/mu.jpeg') no-repeat center center;
+  background-size: cover;      /* ensures full coverage */
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;                 /* white text for readability */
+  position: relative;
+}
+
+.Motto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Motto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.Motto h2,
+.Motto blockquote {
+  position: relative;
+  z-index: 10;
+}
+
+.Motto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.Motto blockquote {
+  font-style: italic;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-left: 4px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .Motto {
+    background-attachment: scroll; /* fallback on mobile */
+  }
+}
+
+  header {
+    background-color: #5d3fd3;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: fit-content;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 6px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Glow Effect on Active */
+.hamburger-menu.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px #f4c542, 0 0 30px rgba(255, 255, 255, 0.5);
+  animation: pulse 2s infinite;
+}
+
+/* Keyframes for Pulse Effect */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px #f4c542, 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #f4c542, 0 0 40px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Inside Hamburger Menu Styling */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(44, 62, 80, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+.nav-links.active {
+  display: flex;
+  animation: slideInFromBelow 0.5s ease-out;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4c542;
+  transform: translateX(5px);
+}
+
+/* Keyframes for Slide In From Right Animation */
+@keyframes slideInFromRight {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Keyframes for Slide In From Below Animation */
+@keyframes slideInFromBelow {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+  .history {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.history h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8a2be2;
+  margin-bottom: 20px;
+}
+
+.history h2 i {
+  margin-right: 8px;
+}
+
+.history h3 {
+  color: #4b0082;
+  margin-top: 30px;
+}
+
+.history ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.history ul li {
+  margin-bottom: 10px;
+}
+
+  
+  .description,
+  .executives,
+  .media,
+  .faq {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 6px solid #a084e8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+  }
+  
+  .executives ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .executives li {
+    margin: 10px 0;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    background-color: #a084e8;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .tab-button:hover {
+    background-color: #8a64d6;
+  }
+  
+  .tab-button.active {
+    background-color: #5d3fd3;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .media-item {
+    flex: 1 1 200px;
+    text-align: center;
+  }
+  
+  .media-item img,
+  .media-item video {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .media-item a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #5d3fd3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .media-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .faq-question {
+    background-color: #dcd0ff;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-question:hover {
+    background-color: #c5a3ff;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 10px 15px;
+    background-color: #f6f3ff;
+    border-left: 4px solid #5d3fd3;
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #5d3fd3;
+    color: white;
+    margin-top: 40px;
+  }
+  

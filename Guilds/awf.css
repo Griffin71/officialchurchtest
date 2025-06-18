@@ -1,0 +1,402 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f0f9;
+    color: #2d2d2d;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #f4c542; /*  */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  /* Navigation Styling */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 15px;
+    gap: 25px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: black;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background: gold;
+    transform: translateY(-2px);
+  }
+
+  /* Glow Effect on Active */
+.hamburger-menu.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px #f4c542, 0 0 30px rgba(255, 255, 255, 0.5);
+  animation: pulse 2s infinite;
+}
+
+/* Keyframes for Pulse Effect */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px #f4c542, 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #f4c542, 0 0 40px rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+  .history {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.history h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8a2be2;
+  margin-bottom: 20px;
+}
+
+.history h2 i {
+  margin-right: 8px;
+}
+
+.history h3 {
+  color: #4b0082;
+  margin-top: 30px;
+}
+
+.history ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.history ul li {
+  margin-bottom: 10px;
+}
+
+/* Inside Hamburger Menu Styling */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(44, 62, 80, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+.nav-links.active {
+  display: flex;
+  animation: slideInFromBelow 0.5s ease-out;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4c542;
+  transform: translateX(5px);
+}
+
+/* Keyframes for Slide In From Right Animation */
+@keyframes slideInFromRight {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Keyframes for Slide In From Below Animation */
+@keyframes slideInFromBelow {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+  
+  /* Main Section Layouts with Cards */
+  .description,
+  .executives,
+  .media,
+  .faq {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Specific section styles */
+  .description {
+    border-left: 6px solid #f4c542; /* Same as header background */
+  }
+  
+  .executives {
+    border-left: 6px solid #f4c542;
+  }
+  
+  .media {
+    border-left: 6px solid #f4c542;
+  }
+  
+  .faq {
+    border-left: 6px solid #f4c542;
+  }
+  
+  /* Executive List */
+  .executives ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .executives li {
+    margin: 10px 0;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .tab-button {
+    background-color: #f4c542; /* Keeping the same yellowish tone */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .tab-button:hover {
+    background-color: #d1b233;
+  }
+  
+  .tab-button.active {
+    background-color: #f4c542;
+  }
+  
+  .tab-content {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tab-content.active {
+    display: flex;
+  }
+  
+  /* Media Card */
+  .media-item {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f6f3ff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .media-item img,
+  .media-item video {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .media-item a {
+    display: block;
+    margin-top: 10px;
+    color: #f4c542;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .media-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* FAQ Section with Card Layout */
+  .faq h2 {
+    text-align: center;
+    color: #f4c542;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+  }
+  
+  .faq-question {
+    width: 100%;
+    background-color: #f6f3ff;
+    border: none;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-question:hover {
+    background-color: #f1e2a8;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 0 15px 15px 15px;
+    background-color: #f6f3ff;
+    border-left: 4px solid #f4c542;
+    margin-top: 5px;
+    border-radius: 4px;
+    color: #444;
+  }
+  
+  .faq-answer.show {
+    display: block;
+  }
+  
+  .faq-question i {
+    color: #f4c542;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question.active i {
+    transform: rotate(180deg);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f4c542;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .media-item {
+      width: 100%;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li a {
+      width: 80%;
+      justify-content: center;
+    }
+  }
+ .Motto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertical centering */
+  align-items: center;         /* horizontal centering */
+  min-height: 60vh;            /* shorter than full screen */
+  text-align: center;
+  background: url('../assets/saint2.png') no-repeat center center;
+  background-size: cover;      /* ensures full coverage */
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;                 /* white text for readability */
+  position: relative;
+}
+
+.Motto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Motto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.Motto h2,
+.Motto blockquote {
+  position: relative;
+  z-index: 10;
+}
+
+.Motto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.Motto blockquote {
+  font-style: italic;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-left: 4px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .Motto {
+    background-attachment: scroll; /* fallback on mobile */
+  }
+}
+

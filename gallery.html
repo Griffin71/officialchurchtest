@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="headers.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-church"></i> St. Francis of Assisi</div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="guilds.html"><i class="fas fa-users"></i> Guilds</a></li>
+                <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Gallery</h1>
+            <p class="subtle-intro">Explore our community through photos and videos</p>
+            <style>
+                .subtle-intro {
+                    color: #aaa;
+                    font-size: 1.1em;
+                    text-align: center;
+                    opacity: 0;
+                    animation: fadeInUp 1.2s ease-out forwards;
+                    margin-bottom: 10px;
+                }
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            </style>
+        </section>
+        
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="assets/6.jpg" alt="Church Community Event">
+                <div class="overlay"><p>AWF's Outreach</p></div>
+            </div>
+    
+            <div class="gallery-item">
+                <video muted playsinline loop preload="metadata">
+                    <source src="assets/14.mp4" type="video/mp4">
+                    <source src="assets/14.webm" type="video/webm">
+                    <source src="assets/14.ogv" type="video/ogg">
+                </video>
+                <div class="overlay"><p>Choir at the community hall</p></div>
+            </div>
+    
+            <div class="gallery-item">
+                <img src="assets/16.jpg" alt="Charity Work">
+                <div class="overlay"><p></p></div>
+            </div>
+    
+        
+
+ <div class="gallery-item">
+                <img src="assets/G1.jpg" alt="Charity Work">
+                <div class="overlay"><p></p></div>
+            </div>
+
+             <div class="gallery-item">
+                <img src="assets/G2.jpg" alt="Charity Work">
+                <div class="overlay"><p></p></div>
+            </div>
+
+             <div class="gallery-item">
+                <img src="assets/G3.jpg" alt="Charity Work">
+                <div class="overlay"><p></p></div>
+            </div>
+
+             <div class="gallery-item">
+                <img src="assets/G4.jpg" alt="Charity Work">
+                <div class="overlay"><p></p></div>
+            </div>
+
+        </section>
+    </main>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <a class="download" href="#" download><i class="fas fa-download"></i> </a>
+        <span class="nav-arrow left">&#10094;</span>
+<span class="nav-arrow right">&#10095;</span>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <video id="lightbox-video" controls playsinline>
+                <source src="" type="video/mp4">
+                <source src="" type="video/webm">
+                <source src="" type="video/ogg">
+            </video>
+        </div>
+    </div>
+    
+
+    
+
+   
+    <script src="gallery.js"></script>
+
+<footer>
+    <div class="footer-content">
+     
+      <p><a href="guilds.html">Check out our guilds here</a></p>
+      <p><a href="donate.html">Donate here</a></p>
+    </div>
+        <p>Follow us on social media:</p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/stfrancismamelodiwest" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/stfrancismamelodiwest" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.instagram.com/stfrancismamelodiwest" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCX1Z5g7Q4v8x3G6J9f2Y5gA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="footer-links">
+            <a href="terms.html" class="footer-link">Terms & Conditions</a> | 
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        </p>
+        <p>&copy; 2025 St. Francis of Assisi. All rights reserved.</p> 
+     
+  </footer>
+</body>
+ <script src="piracy.js"></script>
+   <script src="header.js" defer></script>
+   <script src ="download.js"></script> 
+</html>

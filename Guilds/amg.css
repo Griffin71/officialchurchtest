@@ -1,0 +1,175 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Card Style Sections */
+  section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #111;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: #ffcc00;
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    color: #ddd;
+  }
+  
+  /* Executives List */
+  .executives ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+  
+  .executives li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Media Section */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .tab-button:hover,
+  .tab-button.active {
+    background-color: #ffcc00;
+    color: #000;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .media-item {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .media-item img,
+  .media-item video {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .media-item a {
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  
+  .media-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* FAQ Section */
+  .faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+  }
+  
+  .faq-question {
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-answer {
+    display: none;
+    color: #ccc;
+    padding: 10px 0 0 0;
+  }
+  
+  .faq-answer.open {
+    display: block;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 2px solid #444;
+  }
+  

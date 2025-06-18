@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St Lawrence Servers</title>
+  <link rel="stylesheet" href="servers.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>St Lawrence Servers</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="../guilds.html"><i class="fa fa-users"></i> Guilds</a></li>
+        <li><a href="../events.html"><i class="fa fa-calendar-alt"></i> Events</a></li>
+        <li><a href="../contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+     <section class="Motto">
+     
+  <h2><i class="fa fa-cross"></i> Motto</h2>
+  <blockquote>
+    <hr>
+    Psalm 43: 4A<br>
+    I will go unto the altar of God, even unto the God of my joy and gladness.
+  </blockquote>
+</section>
+
+    
+
+  <section class="description">
+    <p>Welcome to the St Lawrence Servers page. We are a dedicated guild committed to serving with excellence and integrity.</p>
+  </section>
+ 
+  <section class="executives">
+    <h2><i class="fa fa-users"></i> Executives</h2>
+    <ul>
+      <li><strong>Chairperson:</strong> Sihle Leshaba</li>
+      <li><strong>Training Officer:</strong> Kabelo Kgosana</li>
+      <li><strong>Secretary:</strong> Sibusiso Nowatha</li>
+    </ul>
+  </section>
+
+  <section class="media">
+    <h2><i class="fa fa-photo-film"></i> Media Gallery</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('photos')"><i class="fa fa-image"></i> Photos</button>
+      <button class="tab-button" onclick="switchTab('videos')"><i class="fa fa-video"></i> Videos</button>
+    </div>
+
+    <div id="photos" class="tab-content active">
+      <div class="media-item">
+        <img src="photo1.jpg" alt="Photo 1" />
+        <a href="photo1.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <img src="photo2.jpg" alt="Photo 2" />
+        <a href="photo2.jpg" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <div id="videos" class="tab-content">
+      <div class="media-item">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <a href="video1.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+      <div class="media-item">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4" />
+        </video>
+        <a href="video2.mp4" download><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+  </section>
+
+
+                    <section class="faq">
+                        <h2><i class="fa fa-question-circle"></i> Frequently Asked Questions</h2>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">What is the purpose of St Lawrence Servers?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>St Lawrence Servers is a guild dedicated to serving with excellence and integrity, providing support and guidance to its members.</p>
+                        </div>
+                        </div>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">How can I join the guild?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>You can join the guild by contacting the Chairperson or any of the executives listed above for more information.</p>
+                        </div>
+                        </div>
+                    
+                        <div class="faq-item">
+                        <button class="faq-question">Are there any membership fees?<i class="fa fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>No, there are no membership fees required to join St Lawrence Servers.</p>
+                        </div>
+                        </div>
+                    </section>
+                    
+
+                    <noscript>
+  <div style="position:fixed; top:0; left:0; width:100%; background:red; color:white; padding:10px; z-index:10000;">
+    JavaScript is disabled. This action is logged and goes against our Terms and Privacy Policy.
+  </div>
+</noscript>
+
+  <footer>
+    <p>&copy; 2025 St Lawrence Servers | Built by Line-Tech | <i class="fa fa-envelope"></i> info@linetech.com</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.fa-chevron-down, .fa-chevron-up');
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        if (icon) icon.classList.remove('fa-chevron-up'), icon.classList.add('fa-chevron-down');
+      } else {
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+        document.querySelectorAll('.faq-question .fa-chevron-up').forEach(i => {
+          i.classList.remove('fa-chevron-up');
+          i.classList.add('fa-chevron-down');
+        });
+        answer.style.display = 'block';
+        if (icon) icon.classList.remove('fa-chevron-down'), icon.classList.add('fa-chevron-up');
+      }
+    });
+  });
+  // Hide all answers initially
+  document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const downloadLinks = document.querySelectorAll('a[download]');
+
+  downloadLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default anchor click
+
+      const imageURL = this.getAttribute("href");
+      const fileName = imageURL.split("/").pop();
+
+      // Try to download using Blob
+      fetch(imageURL, { mode: 'cors' })
+        .then(response => {
+          if (!response.ok) throw new Error("Network response was not ok");
+          return response.blob();
+        })
+        .then(blob => {
+          const blobURL = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = blobURL;
+          a.download = fileName;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(blobURL);
+        })
+        .catch(error => {
+          console.warn("Direct download failed:", error);
+          alert("⚠️ Unable to download the image directly, it's not your fault, your browser is not CORS compatible.\n\nPlease long-press the image and select 'Save Image' or take a screenshot.");
+        });
+
+      // Notify mobile users about download limitations
+      if (isMobileDevice()) {
+        alert("📲 If the image doesn't appear in your gallery, please check your Downloads folder. On iPhones, long-press the image and tap 'Save to Photos' or take a screenshot.");
+      }
+    });
+  });
+});
+
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+</script>
+
+
+    <script src="servers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+     <script src="../piracy.js"></script>
+           
+</body>
+</html>
